@@ -10,7 +10,9 @@ class BankAccount:
         else:
             print("Invalid amount")
     def withdraw(self,amount):
-        if(0<amount<=self.Acc_balance):
+        if(amount<=0):
+            print("Enter valid amount to withdraw")
+        elif(0<amount<=self.Acc_balance):
             self.Acc_balance-=amount
             print(f"Withdrew {amount}rs and Remaining Balance:{self.Acc_balance}")
         else:
